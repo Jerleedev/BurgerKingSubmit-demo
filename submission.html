@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+    <title>Form review</title>
+</head>
+<body>
+    <section id="overlay">
+        <img src="https://1000logos.net/wp-content/uploads/2016/10/Burger-King_Logo-700x420.png" alt="Burger-King_Logo-700x420" id="logo">
+    </section>
+    <form action="submission.html" method="post">
+        <!-- First Line -->
+        <h1>Let's create a burger</h1>
+        <section class="meat">
+            <label for="beef">What type of meat would you like ?</label>
+            <br>
+            <input type="text" id="beef" name="beef">
+        </section>
+        <hr>
+
+        <!-- Second Line -->
+        <section class="patties">
+            <label for="amount">How many patties would you like ?</label>
+            <br>    
+            <input type="number" id="amount" name="amount" max="5" min="1">
+        </section>
+        <hr>
+
+        <!-- Third Line -->
+        <section class="cooked">
+            <span style="color: red;">Rare</span>
+            <input type="range" min="1" max="5" step="1" name="doneness" id="doneness">
+            <span style="color: saddlebrown;">Well-done</span>
+        </section>
+        <hr>
+
+        <!-- Fourth Line -->
+        <section class="toppings">
+            <span>Choose your toppings:</span>
+            <br>
+            <input type="checkbox" name="topping" id="lettuce">
+            <span style="color: lawngreen;">Lettuce</span>
+            <input type="checkbox" name="topping" id="onion">
+            <span style="color:lightgrey">Onion</span>
+            <input type="checkbox" name="topping" id="olive">
+            <span style="color: darkolivegreen;">Olive</span>
+            <input type="checkbox" name="topping" id="tomato">
+            <span style="color: tomato">Tomato</span>
+            <input type="checkbox" name="topping" id="cucumber">
+            <span style="color: green;">Cucumber</span>
+        </section>
+        <hr>
+
+        <!-- Fifth Line -->
+        <section class="question">
+            <span>Would you like to add more cheese?</span>
+            <br>
+            <input type="radio" name="cheese" id="yes" value="yes">
+            <label for="yes" id="yes">Yes</label>
+            <input type="radio" name="cheese" id="no">
+            <label for="no" id="no">No</label>
+        </section>
+
+        <hr>
+
+        <!-- Sixth Line -->
+        <section class="bun-type">
+            <span>What type of bun would you like?</span>
+            <br>
+            <select name="bun" id="bun">
+                <option value="plain">Plain</option>
+                <option value="seasame">Seasame</option>
+                <option value="pretzel">Pretzel</option>
+                <option value="brioche">Brioche</option>
+                <option value="potato">Potato</option>
+            </select>    
+        </section>
+        <hr>
+
+        <!-- Seventh Line -->
+        <section class="sauce-selection">
+            <label for="sauce">What sauce would you add?</label>
+            <br>
+            <input list="sauces" id="sauce" name="sauce">
+            <datalist id="sauces">
+                <option value="Ketchup">great</option>
+                <option value="Mayo">good</option>
+                <option value="Hot-sauce">good</option>
+                <option value="Mustard">great</option>
+                <option value="Thousand-Island">delicious</option>
+            </datalist>
+        </section>
+        <hr>
+
+        <!-- Eighth Line -->
+        <section class="extra-info">
+            <label for="extra">Anything else you want to add?</label>
+            <br>
+            <textarea name="extra" id="extra" cols="30" rows="5" placeholder="type here"></textarea>
+        </section>
+        <hr>
+
+        <!-- Nineth Line -->
+        <section class="submission">
+            <button type="submit" id="submit" name="submit">SUBMIT</button>
+        </section>
+
+    <div id="root"></div>
+
+    <script src="burger.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/17.0.2/umd/react.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/17.0.2/umd/react-dom.development.js"></script>
+    </form>
+</body>
+</html>

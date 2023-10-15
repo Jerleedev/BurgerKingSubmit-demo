@@ -1,0 +1,348 @@
+body {
+    font-family: 'Rubik', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    background-image: url('https://images.pexels.com/photos/1600743/pexels-photo-1600743.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  
+  #overlay {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  #logo {
+    max-width: 200px;
+  }
+  
+  form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    animation: fade-in 0.5s ease;
+  }
+  
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: burlywood;
+    animation: scale-in 0.5s ease;
+
+  }
+  
+  @keyframes scale-in {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  section {
+    margin-bottom: 20px;
+    animation: slide-up 0.5s ease;
+  }
+  
+  @keyframes slide-up {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+    animation: fade-in 0.5s ease;
+  }
+  
+  input[type="text"],
+  input[type="number"],
+  textarea,
+  select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+    font-size: 16px;
+    animation: slide-up 0.5s ease;
+    box-sizing: border-box;
+  }
+  
+  input[type="text"]:focus,
+  input[type="number"]:focus,
+  textarea:focus,
+  select:focus {
+    outline: none;
+    border-color: #4caf50;
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
+    animation: border-glow 0.5s infinite alternate;
+  }
+  
+  @keyframes border-glow {
+    0% {
+      border-color: #4caf50;
+      box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
+    }
+    100% {
+      border-color: #ccc;
+      box-shadow: none;
+    }
+  }
+  
+  section.cooked {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    animation: slide-up 0.5s ease;
+  }
+  
+  section.cooked span {
+    font-weight: bold;
+    color: #555;
+  }
+  
+  section.cooked input[type="range"] {
+    width: 100%;
+  }
+  
+  section.cooked span.range-label {
+    font-size: 14px;
+    color: #777;
+  }
+  
+  section.cooked span.range-label:first-child {
+    text-align: left;
+  }
+  
+  section.cooked span.range-label:last-child {
+    text-align: right;
+  }
+  
+  section.cooked span.range-label.hide-label {
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  section.cooked input[type="range"]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 8px;
+    background-color: #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  section.cooked input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: #4caf50;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  section.cooked input[type="range"]::-moz-range-track {
+    width: 100%;
+    height: 8px;
+    background-color: #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  section.cooked input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background-color: #4caf50;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  section.cooked input[type="range"]::-ms-track {
+    width: 100%;
+    height: 8px;
+    background-color: #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  section.cooked input[type="range"]::-ms-fill-lower {
+    background-color: #ddd;
+    border-radius: 4px;
+  }
+  
+  section.cooked input[type="range"]::-ms-fill-upper {
+    background-color: #ddd;
+    border-radius: 4px;
+  }
+  
+  section.cooked input[type="range"]::-ms-thumb {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: #4caf50;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  section.cooked input[type="range"]:focus {
+    outline: none;
+  }
+  
+  section.cooked input[type="range"]:focus::-webkit-slider-thumb {
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
+  }
+  
+  section.cooked input[type="range"]:focus::-moz-range-thumb {
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
+  }
+  
+  section.cooked input[type="range"]:focus::-ms-thumb {
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
+  }
+  
+  
+  input[type="checkbox"]{
+    margin-right: 5px;
+    line-height: 20px;
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: fade-in 0.5s ease forwards;
+    
+  }
+
+  .question{
+    display: flex;
+    margin-left: 20px;
+    margin: 0 auto;
+    transform: translate(-50%,);
+    justify-content: space-between;
+  }
+
+  #yes{
+    margin-left: -30px;
+    margin-top: 1px;  
+  }
+
+  #no{
+    margin-left: -30px;
+    margin-top: 1px;
+  }
+   @keyframes fade-in {
+    0% {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  section.submission {
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  button#submit {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    cursor: pointer;                            
+    transition: background-color 0.3s ease;
+    transform: scale(0.7);
+  }
+
+  button{
+    transform: scale(0.7);
+  }
+  
+  button:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+  button#submit:hover {
+    background-color: #45a049;
+  }
+
+  button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+  
+  
+  @keyframes button-glow {
+    0% {
+      box-shadow: 0 0 5px rgba(76, 175, 80, 0.4);
+    }
+    100% {
+      box-shadow: none;
+    }
+  }
+  
+  hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+  }
+  
+  span {
+    font-weight: bold;
+    color: #333;
+    animation: fade-in 0.5s ease;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  @media screen and (max-width: 480px) {
+    form {
+      padding: 10px;
+    }
+    
+    h1 {
+      font-size: 20px;
+    }
+  }
+
+input[type="checkbox"]{
+  margin-left: 10px;
+  margin-top: 15px;
+  width: 15px;
+  height: 15px;
+  outline-style: auto;
+}
